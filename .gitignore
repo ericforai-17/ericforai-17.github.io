@@ -1,0 +1,11 @@
+# Original reference documents stay local. Only curated site assets are published.
+/*.pdf
+/tmp/
+/output/
+/.venv/
+/node_modules/
+/.DS_Store
+/Thumbs.db
+*.log
+__pycache__/
+
