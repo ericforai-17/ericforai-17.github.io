@@ -2,11 +2,13 @@
 
 以繁體中文呈現個人介紹、專業技能、分析作品、實習經歷、研究成果與聯絡方式的響應式網站。使用原生 HTML、CSS 與 JavaScript，適合部署到 GitHub Pages，無須安裝前端套件或執行建置。
 
-> 目前狀態：網站初版已建立，尚未發布至 GitHub Pages。下方為預定網址，不代表已上線。
+> 目前狀態：網站初版已於 2026-11-02 上線。正式頁面及 16 份 PDF 下載皆已驗證。
 
-- 預定 GitHub 倉庫：[ericforai-17/ericforai-17.github.io](https://github.com/ericforai-17/ericforai-17.github.io)
-- 預定公開網站：[ericforai-17.github.io](https://ericforai-17.github.io/)
+- GitHub 倉庫：[ericforai-17/ericforai-17.github.io](https://github.com/ericforai-17/ericforai-17.github.io)
+- 公開網站：[ericforai-17.github.io](https://ericforai-17.github.io/)
 - 聯絡 Email：[leezr34@gmail.com](mailto:leezr34@gmail.com)
+
+![網站桌面預覽](docs/preview.jpg)
 
 ## 網站內容
 
@@ -39,7 +41,9 @@
 ├── .gitignore                    # 排除根目錄原始 PDF 與本機暫存
 ├── README.md
 ├── docs/
-│   └── content-sources.md         # 公開資料來源與附件對照
+│   ├── content-sources.md         # 公開資料來源與附件對照
+│   ├── validation.md              # 初版驗證結果與範圍
+│   └── preview.jpg                # 正式網站桌面預覽
 ├── scripts/
 │   └── check_site.py              # 檢查連結、檔案與公開目錄範圍
 └── site/                         # 唯一部署目錄
@@ -91,9 +95,11 @@ node --check site/assets/main.js
 - 鍵盤可操作互動元件，焦點清楚，停用 JavaScript 仍能閱讀。
 - 公開目錄沒有原始履歷、家庭敘述或本機暫存資料。
 
+本次已完成的檢查與瀏覽器測試範圍，見 [初版驗證紀錄](docs/validation.md)。
+
 ## GitHub Pages 部署
 
-本專案已準備 GitHub Actions 工作流程；先完成本機內容，再建立遠端倉庫並設定發布。倉庫採 **Public**，名稱為 `ericforai-17.github.io`。
+本專案已使用 GitHub Actions 完成部署。倉庫採 **Public**，名稱為 `ericforai-17.github.io`；往後推送 `main` 會先驗證再部署。以下保留首次設定步驟，方便重建環境：
 
 1. 在 GitHub 建立上述空白倉庫，不額外產生 README 或其他起始檔案。
 2. 若本機尚未初始化 Git，執行 `git init -b main`；以自己的 Git 使用者身分提交網站檔案。既有 Git 倉庫不要重複初始化。
@@ -138,9 +144,9 @@ ci: add validated GitHub Pages deployment
 | 聯絡管道 | Email、GitHub |
 | RWD | 桌面、平板與手機響應式樣式 |
 | 完整 README | 本文件 |
-| Git 紀錄 | 部署階段初始化並保留有意義的提交 |
-| GitHub 倉庫連結 | 待建立與推送 |
-| GitHub Pages 公開網址 | 待部署驗證 |
+| Git 紀錄 | 已依網站、文件與 CI／部署分組提交並推送 |
+| GitHub 倉庫連結 | 已建立公開倉庫，連結見文件開頭 |
+| GitHub Pages 公開網址 | 已上線，正式首頁與 16 份 PDF 下載驗證通過 |
 
 ## 素材與權利
 
